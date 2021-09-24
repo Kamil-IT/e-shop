@@ -37,12 +37,6 @@ CREATE TABLE order_x
     total_price  INT,
     total_weight FLOAT
 );
-ALTER TABLE order_x
-    ADD CONSTRAINT order_x_ibfk_
-        FOREIGN KEY (user_id)
-            REFERENCES user (id);
-CREATE INDEX idx_shopping_cart
-    ON shopping_cart_item (product_id);
 
 CREATE TABLE shopping_cart_item
 (
@@ -51,6 +45,12 @@ CREATE TABLE shopping_cart_item
     quantity         INT,
     PRIMARY KEY (shopping_cart_id, product_id)
 );
+
+-- Create indexes
+CREATE INDEX idx_shopping_cart
+    ON shopping_cart_item (product_id);
+
+-- Add constraints
 ALTER TABLE shopping_cart_item
     ADD CONSTRAINT shopping_cart_item_ibfk_
         FOREIGN KEY (shopping_cart_id)
@@ -59,3 +59,7 @@ ALTER TABLE shopping_cart_item
     ADD CONSTRAINT shopping_cart_item_ibfk_2
         FOREIGN KEY (product_id)
             REFERENCES products (id);
+ALTER TABLE order_x
+    ADD CONSTRAINT order_x_ibfk_
+        FOREIGN KEY (user_id)
+            REFERENCES user (id);
