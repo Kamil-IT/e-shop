@@ -22,6 +22,46 @@ export class ProductService {
         price: 1000,
         weight: 13.0
       },
+      {
+        id: 5,
+        name: "Komputer Optimus E-Sport GB450T-CR9",
+        quantity: 1,
+        availability: "yes",
+        price: 1000,
+        weight: 13.0
+      },
+      {
+        id: 6,
+        name: "Komputer Optimus E-Sport GB450T-CR9",
+        quantity: 1,
+        availability: "yes",
+        price: 1000,
+        weight: 13.0
+      },
+      {
+        id: 7,
+        name: "Komputer Optimus E-Sport GB450T-CR9",
+        quantity: 1,
+        availability: "yes",
+        price: 1000,
+        weight: 13.0
+      },
+      {
+        id: 8,
+        name: "Komputer Optimus E-Sport GB450T-CR9",
+        quantity: 1,
+        availability: "yes",
+        price: 1000,
+        weight: 13.0
+      },
+      {
+        id: 9,
+        name: "Komputer Optimus E-Sport GB450T-CR9",
+        quantity: 1,
+        availability: "yes",
+        price: 1000,
+        weight: 13.0
+      },
     ]
   );
 
