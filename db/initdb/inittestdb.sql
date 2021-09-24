@@ -38,6 +38,9 @@ CREATE TABLE order_x
     total_weight FLOAT
 );
 
+CREATE INDEX idx_shopping_cart
+    ON shopping_cart_item (product_id);
+
 CREATE TABLE shopping_cart_item
 (
     shopping_cart_id INT,
@@ -45,10 +48,6 @@ CREATE TABLE shopping_cart_item
     quantity         INT,
     PRIMARY KEY (shopping_cart_id, product_id)
 );
-
--- Create indexes
-CREATE INDEX idx_shopping_cart
-    ON shopping_cart_item (product_id);
 
 -- Add constraints
 ALTER TABLE shopping_cart_item
