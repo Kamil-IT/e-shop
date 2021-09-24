@@ -1,1 +1,6 @@
-<p>product-overview works!</p>
+<div *ngFor="let product of products | async">
+
+  <app-product-line-details [product]="product"></app-product-line-details>
+
+</div>
+
