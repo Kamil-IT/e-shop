@@ -1,11 +1,3 @@
-body {
-  padding: 1.5em;
-}
-
-.container {
-  border: #0a53be;
-}
-
 .container .product {
   width: 610px;
   height: 250px;
@@ -14,7 +6,7 @@ body {
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 0 21 3 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 21px 3px rgba(0, 0, 0, 0.15);
   transition: all .1s ease-in-out;
 }
 
@@ -72,25 +64,25 @@ body {
   transition: all .1s ease-in-out;
 }
 
-.container .product .product-info .product-content .buttons .add {
+.product .product-info .product-content .buttons .add {
   border: 1px #5e5e5e solid;
 }
 
-.container .product .product-info .product-content .buttons .add:hover {
+.product .product-info .product-content .buttons .add:hover {
   border-color: #6997b6;
   color: #6997b6;
 }
 
-.container .product .product-info .product-content .buttons .buy {
+.product .product-info .product-content .buttons .buy {
   border: 1px #5e5e5e solid;
 }
 
-.container .product .product-info .product-content .buttons .buy:hover {
+.product .product-info .product-content .buttons .buy:hover {
   border-color: #6997b6;
   color: #6997b6;
 }
 
-.container .product .product-info .product-content .buttons #price {
+.product .product-info .product-content .buttons #price {
   margin-left: 4em;
   color: #5e5e5e;
   font-weight: bold;
