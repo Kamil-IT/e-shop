@@ -15,7 +15,9 @@ import {ProductService} from "./services/product-service";
     ProductOverviewComponent
   ],
   exports: [
-    ProductOverviewComponent
+    ProductOverviewComponent,
+    ProductDetailsComponent,
+    ProductLineDetailsComponent
   ],
   imports: [
     CommonModule

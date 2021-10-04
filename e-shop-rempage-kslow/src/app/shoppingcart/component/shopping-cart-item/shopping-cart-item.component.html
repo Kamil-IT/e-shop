@@ -1,0 +1,35 @@
+<!-- Product #1 -->
+<div class="item">
+  <div class="buttons">
+    <span class="delete-btn"></span>
+    <span class="like-btn"></span>
+  </div>
+
+  <div class="image">
+    <img width="100px" height="100px"
+         src="https://prod-api.mediaexpert.pl/api/images/gallery_500_500/thumbnails/images/25/2536366/Obudowa-PC-KRUX-Astra-front.jpg">
+  </div>
+
+  <div class="description">
+    <span>{{shoppingCardItem?.product?.name}}</span>
+    <span>Dysk SSD</span>
+    <span>Karta graficzna</span>
+  </div>
+
+  <div class="quantity">
+    <button class="plus-btn" type="button" name="button" (click)="onClickPlus()">
+      <img width="25px" height="25px"
+           src="data:image/png;base64,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"
+           alt=""/>
+    </button>
+    <input type="text" name="name" value="{{shoppingCardItem?.quantity}}">
+    <button class="minus-btn" type="button" name="button" (click)="onClickMinus()">
+      <img width="25px" height="25px"
+           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAD1BMVEX///8AAAA3Nzfs7OwdHR1hODkSAAAAa0lEQVR4nO3XsQ0AIAwEsQDZf2ZaFoCXkL3BlVcFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI+snmm97haOPIUKFeYpVKgwT6FChXkKFSrMu1z4/eMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAwGEDoAALOtntiYYAAAAASUVORK5CYII="
+           alt=""/>
+    </button>
+  </div>
+
+  <div class="total-price">{{shoppingCardItem?.totalPrice}}</div>
+
+</div>

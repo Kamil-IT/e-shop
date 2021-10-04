@@ -1,0 +1,15 @@
+
+<div class="align-items-center">
+  <form role="search" [formGroup]="searchTextGroup">
+
+    <label for="search">Search for stuff</label>
+    <input id="search" type="search" placeholder="Search..." formControlName="search" autofocus/>
+    <button type="button" (click)="search()">Go</button>
+
+  </form>
+</div>
+
+<div *ngFor="let product of (foundProducts | async)">
+  <app-product-line-details [product]="product"></app-product-line-details>
+</div>
+

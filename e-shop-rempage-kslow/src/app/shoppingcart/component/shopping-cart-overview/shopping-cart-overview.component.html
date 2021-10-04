@@ -1,0 +1,10 @@
+<div class="shopping-cart">
+  <div class="title">
+    Shopping Cart
+  </div>
+
+  <div *ngFor="let shoppingCardItem of (shoppingCard | async)?.shoppingCartItems">
+    <app-shopping-cart-item [shoppingCardItem]="shoppingCardItem"></app-shopping-cart-item>
+  </div>
+
+</div>

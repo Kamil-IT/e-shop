@@ -77,4 +77,12 @@ export class ProductService {
     });
   }
 
+  findAllBySimilarName(name: string): Observable<Product> | any {
+    return new Observable(subscriber => {
+      const products = this.subject.getValue();
+      subscriber.next(products.filter(product => product.name.concat(name)));
+      subscriber.complete();
+    });
+  }
+
 }
