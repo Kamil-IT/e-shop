@@ -19,13 +19,13 @@ CREATE TABLE products
     weight       FLOAT
 );
 
-
 CREATE TABLE shopping_cart
 (
     id             INT PRIMARY KEY,
     quantity       INT,
     total_price    INT,
-    shipping_price FLOAT
+    shipping_price FLOAT,
+    user_id        INT
 );
 CREATE INDEX product_idx
     ON products (id, name, availability);
@@ -36,8 +36,13 @@ CREATE TABLE order_x
     user_id      INT,
     total_price  INT,
     total_weight FLOAT
+        shipping_price FLOAT
+        shopping_cart_id INT
 );
-
+ALTER TABLE order_x
+    ADD CONSTRAINT order_x_ibfk_
+        FOREIGN KEY (user_id)
+            REFERENCES user (id);
 CREATE INDEX idx_shopping_cart
     ON shopping_cart_item (product_id);
 
@@ -48,8 +53,6 @@ CREATE TABLE shopping_cart_item
     quantity         INT,
     PRIMARY KEY (shopping_cart_id, product_id)
 );
-
--- Add constraints
 ALTER TABLE shopping_cart_item
     ADD CONSTRAINT shopping_cart_item_ibfk_
         FOREIGN KEY (shopping_cart_id)
@@ -58,7 +61,3 @@ ALTER TABLE shopping_cart_item
     ADD CONSTRAINT shopping_cart_item_ibfk_2
         FOREIGN KEY (product_id)
             REFERENCES products (id);
-ALTER TABLE order_x
-    ADD CONSTRAINT order_x_ibfk_
-        FOREIGN KEY (user_id)
-            REFERENCES user (id);
